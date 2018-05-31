@@ -1,6 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Mediasapiens',
+    email: 'hello@mediasapiens.de',
+    phone: '+49 40 22817196-1',
   },
   plugins: [
     'gatsby-plugin-react-helmet',

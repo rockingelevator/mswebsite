@@ -5,7 +5,10 @@ import { array, bool } from 'prop-types';
 
 import palette from '../../styledComponents/palette';
 
-const MenuContainer = styled.ul``;
+const MenuContainer = styled.ul`
+  height: auto;
+  overflow: hidden;
+`;
 
 const MenuLink = styled(Link)`
   float: ${props => (props.directionFromRight ? 'right' : 'left')};

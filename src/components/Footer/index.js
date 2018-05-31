@@ -8,11 +8,23 @@ import { Logo, Menu } from '../../components';
 import palette from '../../styledComponents/palette';
 
 const FooterContainer = styled.div`
-  padding: 30px;
+  padding: 30px 0;
 `;
 
 const MenuContainer = styled.div`
   margin-top: 30px;
+  margin-bottom: 10px;
+`;
+
+const ContactContainer = styled.div`
+  padding: 200px 30px;
+`;
+
+const Contact = styled.p`
+  font-size: 90px;
+  font-weight: 700;
+  // line-height: 100px;
+  color: ${palette.text};
 `;
 
 const FOOTER_MENU_LINKS = [
@@ -53,6 +65,12 @@ const FOOTER_MENU_LINKS = [
 const Footer = () => (
   <FooterContainer>
     <Container>
+      <ContactContainer>
+        <a href="mailto:hello@mediasapiens.de">
+          <Contact>hello@mediasapiens.de</Contact>
+        </a>
+        <Contact>+49 40 22817196-1</Contact>
+      </ContactContainer>
       <Link to="/">
         <Logo />
       </Link>

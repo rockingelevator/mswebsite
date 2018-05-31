@@ -9,7 +9,7 @@ import { Menu, Logo } from '../../components';
 
 const HeaderContainer = styled.header`
   ${props => props.background};
-  padding: 65px 30px 30px 30px;
+  padding: 65px 0 30px 0;
 `;
 
 const MenuContainer = styled.ul`
