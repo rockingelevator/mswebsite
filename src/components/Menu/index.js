@@ -5,9 +5,7 @@ import { array, bool } from 'prop-types';
 
 import palette from '../../styledComponents/palette';
 
-const MenuContainer = styled.ul`
-  float: right;
-`;
+const MenuContainer = styled.ul``;
 
 const MenuLink = styled(Link)`
   float: ${props => (props.directionFromRight ? 'right' : 'left')};
@@ -26,16 +24,18 @@ const MenuLink = styled(Link)`
 
 const Menu = ({ items, directionFromRight }) => (
   <MenuContainer>
-    {items.map((item, i) => {
-      return (
-        <MenuLink
-          to={item.link}
-          key={`menulink_${i}`}
-          directionFromRight={directionFromRight}>
-          {item.name}
-        </MenuLink>
-      );
-    })}
+    {items &&
+      items.length > 0 &&
+      items.map((item, i) => {
+        return (
+          <MenuLink
+            to={item.link}
+            key={`menulink_${i}`}
+            directionFromRight={directionFromRight}>
+            {item.name}
+          </MenuLink>
+        );
+      })}
   </MenuContainer>
 );
 

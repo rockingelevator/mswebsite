@@ -12,6 +12,10 @@ const HeaderContainer = styled.header`
   padding: 65px 30px 30px 30px;
 `;
 
+const MenuContainer = styled.ul`
+  float: right;
+`;
+
 const MENU_LINKS = [
   {
     name: 'Über uns',
@@ -35,7 +39,9 @@ const Header = ({ background }) => (
       <Link to="/">
         <Logo />
       </Link>
-      <Menu items={[].concat(MENU_LINKS).reverse()} directionFromRight />
+      <MenuContainer>
+        <Menu items={[].concat(MENU_LINKS).reverse()} directionFromRight />
+      </MenuContainer>
     </Container>
   </HeaderContainer>
 );

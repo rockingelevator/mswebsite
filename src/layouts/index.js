@@ -2,13 +2,14 @@ import React from 'react';
 import { func, object } from 'prop-types';
 import Helmet from 'react-helmet';
 
-import { Header } from '../components';
+import { Header, Footer } from '../components';
 import { Container as BaseContainerStyles } from '../styledComponents/layout';
 
 import './index.css';
 
 const Container = BaseContainerStyles.extend`
   padding-top: 0;
+  min-height: 100%;
 `;
 
 const Layout = ({ children, data }) => (
@@ -22,6 +23,7 @@ const Layout = ({ children, data }) => (
     />
     <Header title={data.site.siteMetadata.title} />
     <Container>{children()}</Container>
+    <Footer />
   </div>
 );
 

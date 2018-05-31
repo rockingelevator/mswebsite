@@ -11,13 +11,54 @@ const FooterContainer = styled.div`
   padding: 30px;
 `;
 
+const MenuContainer = styled.div`
+  margin-top: 30px;
+`;
+
+const FOOTER_MENU_LINKS = [
+  {
+    name: 'Über uns',
+    link: '/about',
+  },
+  {
+    name: 'Services',
+    link: '/services',
+  },
+  {
+    name: 'Events',
+    link: '/events',
+  },
+  {
+    name: 'Blog',
+    link: '/blog',
+  },
+  {
+    name: 'Kontakt',
+    link: '/contact',
+  },
+  {
+    name: 'Impressum',
+    link: '/impressum',
+  },
+  {
+    name: 'Datenschutz',
+    link: '/datenschutz',
+  },
+  {
+    name: 'Karriere',
+    link: '/careers',
+  },
+];
+
 const Footer = () => (
   <FooterContainer>
     <Container>
       <Link to="/">
         <Logo />
       </Link>
-      <Menu />
+      <MenuContainer>
+        <Menu items={FOOTER_MENU_LINKS} />
+      </MenuContainer>
     </Container>
   </FooterContainer>
 );
