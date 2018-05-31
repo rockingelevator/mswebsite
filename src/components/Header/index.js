@@ -1,52 +1,51 @@
 import React from 'react';
-import Link from 'gatsby-link';
+//  import Link from 'gatsby-link';
 import styled from 'styled-components';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
+
+import palette from '../../styledComponents/palette';
+import logo from '../../assets/images/logo.svg';
 
 import { Container } from '../../styledComponents/layout';
+import { Menu } from '../../components';
 
 const HeaderContainer = styled.header`
   ${props => props.background};
-  margin-bottom: 1.45rem;
+  padding: 65px 30px 30px 30px;
 `;
 
-const HeaderWrapper = styled.div`
-  margin: 0 auto;
-  max-width: 1280px;
-  padding: 1.45rem 1.0875rem;
-`;
+const MENU_LINKS = [
+  {
+    name: 'Über uns',
+    link: '/about',
+  },
+  {
+    name: 'Services',
+    link: '/services',
+  },
+  {
+    name: 'Kontakt',
+    link: '/contact',
+  },
+];
 
-const Heading1 = styled.h1`
-  margin: 0;
-`;
+const BACKGROUND = `background-color: ${palette.primaryBackground}`;
 
-const StyledLink = styled(Link)`
-  color: white;
-  text-decoration: none;
-`;
-
-const BACKGROUND = 'background-color: #20232a';
-
-const Header = ({ background, title }) => (
+const Header = ({ background }) => (
   <HeaderContainer background={background}>
     <Container>
-      <HeaderWrapper>
-        <Heading1>
-          <StyledLink to="/">{title}</StyledLink>
-        </Heading1>
-      </HeaderWrapper>
+      <img src={logo} alt="Mediasapiens" />
+      <Menu items={[].concat(MENU_LINKS).reverse()} directionFromRight />
     </Container>
   </HeaderContainer>
 );
 
 Header.defaultProps = {
   background: BACKGROUND,
-  title: 'Polling App',
 };
 
 Header.propTypes = {
-  background: PropTypes.string,
-  title: PropTypes.string,
+  background: string,
 };
 
 export default Header;
