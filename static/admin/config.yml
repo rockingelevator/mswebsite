@@ -1,0 +1,17 @@
+backend:
+  name: test-repo
+
+media_folder: static/assets
+public_folder: assets
+
+collections:
+  - name: pages
+    label: Page
+    folder: pages
+    create: true
+    fields:
+      - { name: path, label: Path }
+      - { name: title, label: Title, required: false }
+      - { name: subtitle, label: Subtitle, required: false }
+      - { name: teaser, label: Teaser, required: false }
+      - { name: body, label: Body, widget: markdown, required: false }
