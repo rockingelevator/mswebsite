@@ -14,5 +14,5 @@ collections:
       - { name: path, label: Path }
       - { name: title, label: Title, required: false }
       - { name: subtitle, label: Subtitle, required: false }
-      - { name: teaser, label: Teaser, required: false }
+      - { name: teaser, label: Teaser, widget: markdown, required: false }
       - { name: body, label: Body, widget: markdown, required: false }
