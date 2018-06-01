@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: bitbucket
+  repo: rockingelevator/mswebsite
 
 media_folder: static/assets
 public_folder: assets
