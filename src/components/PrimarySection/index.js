@@ -13,10 +13,30 @@ import {
 const PrimarySectionContainer = styled.div`
   background-color: ${palette.primaryBackground};
   padding-bottom: 10px;
+  height: auto;
+  // overflow: hidden;
+  position: relative;
+`;
+
+const DotsWrapper = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -120px;
+`;
+
+const DotsAnimation = styled.canvas`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
 `;
 
 const PrimarySection = ({ title, subtitle, children }) => (
   <PrimarySectionContainer>
+    <DotsWrapper id="dotswrapper">
+      <DotsAnimation id="dots" width="800" height="800" />
+    </DotsWrapper>
     <Container>
       {title && <Heading1>{title}</Heading1>}
       {subtitle && <TeaserText>{subtitle}</TeaserText>}
