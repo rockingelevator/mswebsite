@@ -1,25 +1,39 @@
 import React from 'react';
 import Helmet from 'react-helmet';
+import { object } from 'prop-types';
+import styled from 'styled-components';
 
-export default function Template({
-  data, // this prop will be injected by the GraphQL query we'll write in a bit
-}) {
+import { Container } from '../styledComponents/layout';
+import { PrimarySection } from '../components';
+
+const PageContainer = styled.div`
+  padding-top: 30px;
+  max-width: 700px;
+`;
+
+const StaticPageTemplate = ({ data }) => {
   const { markdownRemark: page } = data; // data.markdownRemark holds our post data
+  const { path, title, subtitle, teaser } = page.frontmatter;
   return (
-    <div className="blog-post-container">
+    <div>
       <Helmet
-        title={`${page.frontmatter.title} | ${data.site.siteMetadata.title}`}
+        title={`${title}${title ? ' | ' : ''}${data.site.siteMetadata.title}`}
       />
-      <div className="blog-post">
-        <h1>{page.frontmatter.title}</h1>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: page.html }}
-        />
-      </div>
+      <PrimarySection title={title} subtitle={subtitle}>
+        {teaser}
+      </PrimarySection>
+      <Container>
+        <PageContainer dangerouslySetInnerHTML={{ __html: page.html }} />
+      </Container>
     </div>
   );
-}
+};
+
+StaticPageTemplate.propTypes = {
+  data: object,
+};
+
+export default StaticPageTemplate;
 
 export const pageQuery = graphql`
   query PageByPath($path: String!) {

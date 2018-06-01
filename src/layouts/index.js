@@ -6,6 +6,7 @@ import { Header, Footer } from '../components';
 import { Container as BaseContainerStyles } from '../styledComponents/layout';
 
 import './index.css';
+import './body.css';
 
 const Container = BaseContainerStyles.extend`
   padding-top: 0;

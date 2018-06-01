@@ -23,7 +23,7 @@ const ContactContainer = styled.div`
 const Contact = styled.p`
   font-size: 90px;
   font-weight: 700;
-  // line-height: 100px;
+  line-height: 90px;
   color: ${palette.text};
 `;
 

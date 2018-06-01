@@ -1,0 +1,61 @@
+/* styles for markdown pages */
+h2,
+h3,
+p,
+a {
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  color: #333333;
+}
+
+h2 {
+  font-size: 18px;
+  letter-spacing: 1.5;
+  text-transform: uppercase;
+  padding: 30px 0;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 300;
+  padding: 30px 0 60px 0;
+}
+
+p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 30px;
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 60px;
+  width: 100%;
+  text-align: justify;
+  padding-bottom: 60px;
+  margin-bottom: 30px;
+  border-bottom: 1px dashed #979797;
+}
+
+.columns:last-of-type {
+  border-bottom: none;
+}
+
+.columns a {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.columns p:last-of-type > a {
+  float: right;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background-color: #ededed;
+}
+
+.columns p:last-of-type > a:hover,
+.columns p:last-of-type > a:active {
+  color: white;
+  background-color: #333333;
+}
