@@ -4,9 +4,13 @@ import palette from '../styledComponents/palette';
 const SANS_SERIF = "'Open Sans', Helvetica, Arial, sans-serif";
 const SERIF = "'Butler', Georgia, serif";
 
+export const Heading1 = styled.h3``;
+
 export const Heading2 = styled.h2`
   text-transform: capitalize;
 `;
+
+export const Heading3 = styled.h3``;
 
 export const TeaserText = styled.p`
   font-family: ${SANS_SERIF};
@@ -20,9 +24,10 @@ export const TeaserText = styled.p`
 
 export const TextColumns = styled.div`
   column-count: 2;
-  column-gap: 80px;
+  column-gap: 60px;
   max-width: 700px;
   margin: 60px 0;
+  text-align: justify;
 `;
 
 export const P = styled.p`

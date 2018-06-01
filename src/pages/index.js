@@ -1,11 +1,11 @@
 import React from 'react';
 import { P } from '../styledComponents/typography';
-import { PrimarySection } from '../components';
+import { PrimarySection, Section } from '../components';
 // import Link from 'gatsby-link';
 
 const IndexPage = () => (
   <div>
-    <PrimarySection teaser="Wir entwickeln Lösungen zur sicheren Digitalisierung von Geschäftsprozessen für mittelständische Unternehmen und Konzerne in Logistik, Handel, Produktion, Dienstleistung und E-Commerce.">
+    <PrimarySection subtitle="Wir entwickeln Lösungen zur sicheren Digitalisierung von Geschäftsprozessen für mittelständische Unternehmen und Konzerne in Logistik, Handel, Produktion, Dienstleistung und E-Commerce.">
       <P>
         Wir entwerfen und programmieren schlanke und robuste Individualsoftware,
         die sich flexibel in Ihre Systemlandschaft einfügt. Dazu nutzen wir

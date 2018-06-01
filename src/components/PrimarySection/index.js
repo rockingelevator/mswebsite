@@ -15,11 +15,11 @@ const PrimarySectionContainer = styled.div`
   padding-bottom: 10px;
 `;
 
-const PrimarySection = ({ title, teaser, children }) => (
+const PrimarySection = ({ title, subtitle, children }) => (
   <PrimarySectionContainer>
     <Container>
       {title && <Heading1>{title}</Heading1>}
-      {teaser && <TeaserText>{teaser}</TeaserText>}
+      {subtitle && <TeaserText>{subtitle}</TeaserText>}
       <TextColumns>{children}</TextColumns>
     </Container>
   </PrimarySectionContainer>
@@ -27,7 +27,7 @@ const PrimarySection = ({ title, teaser, children }) => (
 
 PrimarySection.propTypes = {
   title: string,
-  teaser: string,
+  subtitle: string,
   children: node,
 };
 
