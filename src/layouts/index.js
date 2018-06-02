@@ -75,11 +75,13 @@ const Layout = ({ children, data }) => (
       url={withPrefix('/scripts/particles-lib.js')}
       onLoad={() => console.log('particles lib loaded')}
       onError={() => console.log('error while loading dots')}
+      attributes={{ async: false }}
     />
     <Script
       url={withPrefix('/scripts/particles.js')}
       onLoad={() => console.log('particles loaded')}
       onError={() => console.log('error while loading dots')}
+      attributes={{ async: false }}
     />
   </div>
 );
