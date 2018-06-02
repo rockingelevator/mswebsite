@@ -54,8 +54,10 @@ const TeaserContainer = styled.div`
 `;
 
 const PrimarySection = ({ animation, title, subtitle, children }) => {
-  const isShortTeaser =
-    children.props.dangerouslySetInnerHTML.__html.length < 500;
+  const { dangerouslySetInnerHTML } = children.props;
+  const isShortTeaser = dangerouslySetInnerHTML
+    ? dangerouslySetInnerHTML.__html.length < 500
+    : false;
   return (
     <PrimarySectionContainer>
       {animation && <ParticlesContainer id="particles-js" />}
