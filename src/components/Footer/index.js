@@ -89,12 +89,8 @@ const FOOTER_MENU_LINKS = [
     link: '/services',
   },
   {
-    name: 'Events',
-    link: '/events',
-  },
-  {
     name: 'Blog',
-    link: '/blog',
+    link: 'https://blog.mediasapiens.de/',
   },
   {
     name: 'Kontakt',
