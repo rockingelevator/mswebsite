@@ -23,6 +23,11 @@ const MenuLink = styled(Link)`
   &:active {
     color: ${palette.fadedText};
   }
+  @media (max-width: 640px) {
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
 `;
 
 const Menu = ({ items, directionFromRight }) => (

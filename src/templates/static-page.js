@@ -11,7 +11,24 @@ const PageContainer = styled.div`
   max-width: 700px;
 `;
 
+const filterEmpty = arr => {
+  const newArr = [];
+
+  for (let i = arr.length - 1; i >= 0; i--) {
+    if (arr[i] !== '') newArr.push(arr.pop());
+    else arr.pop();
+  }
+
+  return newArr.reverse();
+};
+
+const replaceBreaksWithParagraphs = input => {
+  const content = filterEmpty(input.split('\n')).join('</p><p>');
+  return `<p>${content}</p>`;
+};
+
 const StaticPageTemplate = ({ data }) => {
+  console.log(data);
   const { markdownRemark: page } = data; // data.markdownRemark holds our post data
   const { path, title, subtitle, teaser } = page.frontmatter;
   return (
@@ -23,7 +40,11 @@ const StaticPageTemplate = ({ data }) => {
         title={title}
         subtitle={subtitle}
         animation={path === '/'}>
-        <div dangerouslySetInnerHTML={{ __html: teaser }} />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: replaceBreaksWithParagraphs(teaser),
+          }}
+        />
       </PrimarySection>
       <Container>
         <PageContainer dangerouslySetInnerHTML={{ __html: page.html }} />

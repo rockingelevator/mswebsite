@@ -18,6 +18,11 @@ const HeaderContainer = styled.header`
 
 const MenuContainer = styled.ul`
   float: right;
+
+  @media (max-width: 640px) {
+    float: none;
+    margin-top: 40px;
+  }
 `;
 
 const MENU_LINKS = [
@@ -44,7 +49,14 @@ const Header = ({ background }) => (
         <Logo />
       </Link>
       <MenuContainer>
-        <Menu items={[].concat(MENU_LINKS).reverse()} directionFromRight />
+        <Menu
+          items={
+            window.innerWidth > 640
+              ? [].concat(MENU_LINKS).reverse()
+              : MENU_LINKS
+          }
+          directionFromRight={window.innerWidth > 640}
+        />
       </MenuContainer>
     </Container>
   </HeaderContainer>

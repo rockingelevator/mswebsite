@@ -13,8 +13,6 @@ teaser: >-
   Web-Experten betreuen wir den gesamten Lebenszyklus von Web-Apps: Von Konzept
   über Grafik, User Interface und User Experience bis zum Roll-Out.
 
-
-
   Wir durchdringen unternehmerische und IT-relevante Aspekte Ihres Projekts,
   damit Sie Ihre Geschäftsprozesse zuverlässig, schnell und sicher abwickeln
   können. Unsere Experten-Teams sorgen dabei für hohe Kosteneffizienz und einen

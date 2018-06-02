@@ -20,9 +20,24 @@ export const TeaserText = styled.p`
   font-weight: 400;
   padding: 30px 0 0 0;
   max-width: 700px;
+  margin: 0;
 
   @media (max-width: 1024px) {
     padding-top: 20px;
+  }
+
+  @media (max-width: 640px) {
+    padding-top: 10px;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 18px;
+  }
+
+  @media (max-width: 420px) {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 32px;
   }
 `;
 
@@ -30,15 +45,20 @@ export const TextColumns = styled.div`
   column-count: 2;
   column-gap: 60px;
   max-width: 700px;
-  padding: 30px 0 60px 0;
+  padding: 60px 0;
   text-align: justify;
 
   @media (max-width: 1024px) {
-    padding: 20px 0 40px 0;
+    padding: 40px 0;
   }
 
   @media (max-width: 800px) {
     column-gap: 6%;
+  }
+
+  @media (max-width: 640px) {
+    column-count: 1;
+    padding: 30px 0;
   }
 `;
 
