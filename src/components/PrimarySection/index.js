@@ -52,14 +52,14 @@ const ParticlesFader = styled.div`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f3f3f3', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */
 `;
 
-const PrimarySection = ({ animation, title, subtitle, children }) => (
+const PrimarySection = ({ animation, title, subtitle, teaser }) => (
   <PrimarySectionContainer>
     {animation && <ParticlesContainer id="particles-js" />}
     <ParticlesFader />
     <Container>
-      {title && <Heading1>{title}</Heading1>}
+      {title && <h1>{title}</h1>}
       {subtitle && <TeaserText>{subtitle}</TeaserText>}
-      <TextColumns>{children}</TextColumns>
+      <TextColumns dangerouslySetInnerHTML={{ __html: teaser }} />
     </Container>
   </PrimarySectionContainer>
 );
@@ -68,7 +68,6 @@ PrimarySection.propTypes = {
   animation: bool,
   title: string,
   subtitle: string,
-  children: node,
 };
 
 export default PrimarySection;

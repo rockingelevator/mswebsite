@@ -10,6 +10,10 @@ import { Menu, Logo } from '../../components';
 const HeaderContainer = styled.header`
   ${props => props.background};
   padding: 65px 0 30px 0;
+
+  @media (max-width: 1024px) {
+    padding: 40px 0 20px 0;
+  }
 `;
 
 const MenuContainer = styled.ul`

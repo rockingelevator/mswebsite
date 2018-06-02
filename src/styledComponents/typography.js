@@ -18,16 +18,28 @@ export const TeaserText = styled.p`
   font-size: 20px;
   line-height: 35px;
   font-weight: 400;
-  margin: 20px 0;
+  padding: 30px 0 0 0;
   max-width: 700px;
+
+  @media (max-width: 1024px) {
+    padding-top: 20px;
+  }
 `;
 
 export const TextColumns = styled.div`
   column-count: 2;
   column-gap: 60px;
   max-width: 700px;
-  margin: 60px 0;
+  padding: 30px 0 60px 0;
   text-align: justify;
+
+  @media (max-width: 1024px) {
+    padding: 20px 0 40px 0;
+  }
+
+  @media (max-width: 800px) {
+    column-gap: 6%;
+  }
 `;
 
 export const P = styled.p`
