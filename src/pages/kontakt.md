@@ -2,7 +2,7 @@
 path: /contact
 title: Kontakt
 ---
-\## MEDIASAPIENS GMBH
+## MEDIASAPIENS GMBH
 
 Pickhuben 4
 
@@ -16,7 +16,7 @@ E-Mail: <mailto:hello@mediasapiens.de>
 
 
 
-\## JOBS
+## JOBS
 
 Phone: +49 40 22817196-1
 
@@ -24,7 +24,7 @@ E-Mail: <mailto:jobs@mediasapiens.de>
 
 
 
-\## NEW BUSINESS
+## NEW BUSINESS
 
 Sergej Felde
 
