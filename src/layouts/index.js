@@ -65,6 +65,7 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
       ]}>
       <script src={withPrefix('/scripts/particles-lib.js')} />
       <script src={withPrefix('/scripts/particles.js')} />
