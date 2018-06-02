@@ -88,7 +88,6 @@ const Layout = ({ children, data }) => (
       />
       <link rel="manifest" href="/site.webmanifest" />
       <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#333333" />
-      <script src={withPrefix('/scripts/particles-lib.js')} />
       <script src={withPrefix('/scripts/particles.js')} />
     </Helmet>
     <Header title={data.site.siteMetadata.title} />
