@@ -27,7 +27,7 @@ export const TeaserText = styled.p`
   }
 
   @media (max-width: 640px) {
-    padding-top: 10px;
+    padding-top: 0px;
   }
 
   @media (max-width: 640px) {

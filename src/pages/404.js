@@ -1,10 +1,8 @@
 import React from 'react';
+import { PrimarySection } from '../components';
 
 const NotFoundPage = () => (
-  <div>
-    <h1>404 NOT FOUND</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </div>
+  <PrimarySection title="404" subtitle="Diese Seite gibt es leider nicht" />
 );
 
 export default NotFoundPage;
