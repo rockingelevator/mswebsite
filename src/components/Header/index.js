@@ -50,14 +50,7 @@ const Header = ({ background }) => (
         <Logo />
       </Link>
       <MenuContainer>
-        <Menu
-          items={
-            window.innerWidth > 640
-              ? [].concat(MENU_LINKS).reverse()
-              : MENU_LINKS
-          }
-          directionFromRight={window.innerWidth > 640}
-        />
+        <Menu items={[].concat(MENU_LINKS).reverse()} directionFromRight />
       </MenuContainer>
     </Container>
   </HeaderContainer>
