@@ -6,7 +6,6 @@
 /* How to use? : Check the GitHub README
 /* v2.0.0
 /* ----------------------------------------------- */
-console.log('particles-lib');
 function hexToRgb(e) {
   const a = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   e = e.replace(a, (e, a, t, i) => {

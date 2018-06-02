@@ -4,7 +4,6 @@ import Helmet from 'react-helmet';
 import { withPrefix } from 'gatsby-link';
 import Script from 'react-load-script';
 
-// import particlesScript from '../../static/scripts/particles';
 import { Header, Footer } from '../components';
 // import { Container as BaseContainerStyles } from '../styledComponents/layout';
 
@@ -92,14 +91,3 @@ export const query = graphql`
 `;
 
 export default Layout;
-
-// <Script
-//   url={withPrefix('/scripts/particles.js')}
-//   onLoad={() => console.log('particles loaded')}
-//   onError={() => console.log('error while loading dots')}
-// />
-// <Script
-//   url={withPrefix('/scripts/particles-lib.js')}
-//   onLoad={() => console.log('particles lib loaded')}
-//   onError={() => console.log('error while loading dots')}
-// />

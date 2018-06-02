@@ -8,6 +8,5 @@
 exports.onRouteUpdate = ({ location }) => {
   const evt = document.createEvent('Event');
   evt.initEvent('load', false, false);
-  console.log('dispathing load event');
   window.dispatchEvent(evt);
 };
