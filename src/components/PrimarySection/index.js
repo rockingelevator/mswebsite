@@ -4,11 +4,7 @@ import { string, node, bool } from 'prop-types';
 
 import palette from '../../styledComponents/palette';
 import { Container } from '../../styledComponents/layout';
-import {
-  Heading1,
-  TeaserText,
-  TextColumns,
-} from '../../styledComponents/typography';
+import { TeaserText, TextColumns } from '../../styledComponents/typography';
 
 const PrimarySectionContainer = styled.div`
   background-color: ${palette.primaryBackground};
@@ -52,17 +48,27 @@ const ParticlesFader = styled.div`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f3f3f3', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */
 `;
 
-const PrimarySection = ({ animation, title, subtitle, children }) => (
-  <PrimarySectionContainer>
-    {animation && <ParticlesContainer id="particles-js" />}
-    <ParticlesFader />
-    <Container>
-      {title && <h1>{title}</h1>}
-      {subtitle && <TeaserText>{subtitle}</TeaserText>}
-      <TextColumns>{children}</TextColumns>
-    </Container>
-  </PrimarySectionContainer>
-);
+const TeaserContainer = styled.div`
+  max-width: 700px;
+  padding: 60px 0 30px 0;
+`;
+
+const PrimarySection = ({ animation, title, subtitle, children }) => {
+  const isShortTeaser =
+    children.props.dangerouslySetInnerHTML.__html.length < 500;
+  return (
+    <PrimarySectionContainer>
+      {animation && <ParticlesContainer id="particles-js" />}
+      <ParticlesFader />
+      <Container>
+        {title && <h1>{title}</h1>}
+        {subtitle && <TeaserText>{subtitle}</TeaserText>}
+        {isShortTeaser && <TeaserContainer>{children}</TeaserContainer>}
+        {!isShortTeaser && <TextColumns>{children}</TextColumns>}
+      </Container>
+    </PrimarySectionContainer>
+  );
+};
 
 PrimarySection.propTypes = {
   animation: bool,

@@ -2,7 +2,7 @@
 path: "/services"
 title: "Services"
 subtitle: ""
-teaser: "MEDIASAPIENS entwickelt Lösungen zur sicheren Digitalisierung von Geschäftsprozessen für mittelständische Unternehmen und Konzerne in Logistik, Handel, Produktion, Dienstleistung und E-Commerce. Realisieren Sie Wettbewerbsvorteile und entwickeln Ihre Software in die Zukunft: Kostengünstig, zeitoptimiert und agil."
+teaser: "Mediasapiens entwickelt Lösungen zur sicheren Digitalisierung von Geschäftsprozessen für mittelständische Unternehmen und Konzerne in Logistik, Handel, Produktion, Dienstleistung und E-Commerce. Realisieren Sie Wettbewerbsvorteile und entwickeln Ihre Software in die Zukunft: Kostengünstig, zeitoptimiert und agil."
 ---
 
 ## WEB-ENTWICKLUNG
