@@ -6,6 +6,7 @@
 /* How to use? : Check the GitHub README
 /* v2.0.0
 /* ----------------------------------------------- */
+console.log('particles-lib');
 function hexToRgb(e) {
   const a = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   e = e.replace(a, (e, a, t, i) => {
@@ -23,7 +24,7 @@ function isInArray(e, a) {
   return a.indexOf(e) > -1;
 }
 const pJS = function(e, a) {
-  const t = document.querySelector(`#${  e  } > .particles-js-canvas-el`);
+  const t = document.querySelector(`#${e} > .particles-js-canvas-el`);
   this.pJS = {
     canvas: { el: t, w: t.offsetWidth, h: t.offsetHeight },
     particles: {
@@ -275,27 +276,11 @@ const pJS = function(e, a) {
       if (void 0 != a.opacity_bubble) var s = a.opacity_bubble;
       else var s = a.opacity;
       if (a.color.rgb)
-        var n =
-          `rgba(${ 
-          a.color.rgb.r 
-          },${ 
-          a.color.rgb.g 
-          },${ 
-          a.color.rgb.b 
-          },${ 
-          s 
-          })`;
+        var n = `rgba(${a.color.rgb.r},${a.color.rgb.g},${a.color.rgb.b},${s})`;
       else
-        var n =
-          `hsla(${ 
-          a.color.hsl.h 
-          },${ 
-          a.color.hsl.s 
-          }%,${ 
-          a.color.hsl.l 
-          }%,${ 
-          s 
-          })`;
+        var n = `hsla(${a.color.hsl.h},${a.color.hsl.s}%,${
+          a.color.hsl.l
+        }%,${s})`;
       switch (
         ((i.canvas.ctx.fillStyle = n), i.canvas.ctx.beginPath(), a.shape)
       ) {
@@ -465,8 +450,7 @@ const pJS = function(e, a) {
             i.particles.line_linked.distance;
         if (r > 0) {
           const c = i.particles.line_linked.color_rgb_line;
-          (i.canvas.ctx.strokeStyle =
-            `rgba(${  c.r  },${  c.g  },${  c.b  },${  r  })`),
+          (i.canvas.ctx.strokeStyle = `rgba(${c.r},${c.g},${c.b},${r})`),
             (i.canvas.ctx.lineWidth = i.particles.line_linked.width),
             i.canvas.ctx.beginPath(),
             i.canvas.ctx.moveTo(e.x, e.y),
@@ -680,8 +664,7 @@ const pJS = function(e, a) {
               i.interactivity.modes.grab.distance;
           if (n > 0) {
             const r = i.particles.line_linked.color_rgb_line;
-            (i.canvas.ctx.strokeStyle =
-              `rgba(${  r.r  },${  r.g  },${  r.b  },${  n  })`),
+            (i.canvas.ctx.strokeStyle = `rgba(${r.r},${r.g},${r.b},${n})`),
               (i.canvas.ctx.lineWidth = i.particles.line_linked.width),
               i.canvas.ctx.beginPath(),
               i.canvas.ctx.moveTo(e.x, e.y),
@@ -701,7 +684,7 @@ const pJS = function(e, a) {
         : (i.interactivity.el = i.canvas.el),
         (i.interactivity.events.onhover.enable ||
           i.interactivity.events.onclick.enable) &&
-          (i.interactivity.el.addEventListener('mousemove', (e) => {
+          (i.interactivity.el.addEventListener('mousemove', e => {
             if (i.interactivity.el == window)
               var a = e.clientX,
                 t = e.clientY;
@@ -715,7 +698,7 @@ const pJS = function(e, a) {
                 (i.interactivity.mouse.pos_y *= i.canvas.pxratio)),
               (i.interactivity.status = 'mousemove');
           }),
-          i.interactivity.el.addEventListener('mouseleave', (e) => {
+          i.interactivity.el.addEventListener('mouseleave', e => {
             (i.interactivity.mouse.pos_x = null),
               (i.interactivity.mouse.pos_y = null),
               (i.interactivity.status = 'mouseleave');
@@ -794,27 +777,13 @@ const pJS = function(e, a) {
         t = /#([0-9A-F]{3,6})/gi,
         s = a.replace(t, (a, t, i, s) => {
           if (e.color.rgb)
-            var n =
-              `rgba(${ 
-              e.color.rgb.r 
-              },${ 
-              e.color.rgb.g 
-              },${ 
-              e.color.rgb.b 
-              },${ 
-              e.opacity 
-              })`;
+            var n = `rgba(${e.color.rgb.r},${e.color.rgb.g},${e.color.rgb.b},${
+              e.opacity
+            })`;
           else
-            var n =
-              `hsla(${ 
-              e.color.hsl.h 
-              },${ 
-              e.color.hsl.s 
-              }%,${ 
-              e.color.hsl.l 
-              }%,${ 
-              e.opacity 
-              })`;
+            var n = `hsla(${e.color.hsl.h},${e.color.hsl.s}%,${
+              e.color.hsl.l
+            }%,${e.opacity})`;
           return n;
         }),
         n = new Blob([s], { type: 'image/svg+xml;charset=utf-8' }),
@@ -971,7 +940,7 @@ const pJS = function(e, a) {
             const s = JSON.parse(a.currentTarget.response);
             window.particlesJS(e, s), t && t();
           } else
-            console.log(`Error pJS - XMLHttpRequest status: ${  i.status}`),
+            console.log(`Error pJS - XMLHttpRequest status: ${i.status}`),
               console.log('Error pJS - File config not found');
       }),
       i.send();

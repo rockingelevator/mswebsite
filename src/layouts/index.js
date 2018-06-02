@@ -68,15 +68,11 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}>
       <script src={withPrefix('/scripts/particles-lib.js')} />
+      <script src={withPrefix('/scripts/particles.js')} />
     </Helmet>
     <Header title={data.site.siteMetadata.title} />
     {children()}
     <Footer />
-    <Script
-      url={withPrefix('/scripts/particles.js')}
-      onLoad={() => console.log('particles loaded')}
-      onError={() => console.log('error while loading dots')}
-    />
   </div>
 );
 
@@ -97,6 +93,11 @@ export const query = graphql`
 
 export default Layout;
 
+// <Script
+//   url={withPrefix('/scripts/particles.js')}
+//   onLoad={() => console.log('particles loaded')}
+//   onError={() => console.log('error while loading dots')}
+// />
 // <Script
 //   url={withPrefix('/scripts/particles-lib.js')}
 //   onLoad={() => console.log('particles lib loaded')}
