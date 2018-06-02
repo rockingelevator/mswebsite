@@ -23,7 +23,7 @@ const MenuContainer = styled.ul`
 
   @media (max-width: 640px) {
     float: none;
-    margin-top: 20px;
+    margin-top: 30px;
   }
 `;
 
