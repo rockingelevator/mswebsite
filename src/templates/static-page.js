@@ -19,7 +19,10 @@ const StaticPageTemplate = ({ data }) => {
       <Helmet
         title={`${title}${title ? ' | ' : ''}${data.site.siteMetadata.title}`}
       />
-      <PrimarySection title={title} subtitle={subtitle}>
+      <PrimarySection
+        title={title}
+        subtitle={subtitle}
+        animation={path === '/'}>
         {teaser}
       </PrimarySection>
       <Container>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { string, node } from 'prop-types';
+import { string, node, bool } from 'prop-types';
 
 import palette from '../../styledComponents/palette';
 import { Container } from '../../styledComponents/layout';
@@ -18,25 +18,44 @@ const PrimarySectionContainer = styled.div`
   position: relative;
 `;
 
-const DotsWrapper = styled.div`
+const ParticlesContainer = styled.div`
   position: absolute;
   width: 100%;
   height: 100%;
   top: -120px;
 `;
 
-const DotsAnimation = styled.canvas`
+const ParticlesFader = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
+  top: -120px;
+  background: -moz-linear-gradient(
+    top,
+    rgba(243, 243, 243, 0) 0%,
+    rgba(243, 243, 243, 0) 50%,
+    rgba(243, 243, 243, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(243, 243, 243, 0) 0%,
+    rgba(243, 243, 243, 0) 50%,
+    rgba(243, 243, 243, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(243, 243, 243, 0) 0%,
+    rgba(243, 243, 243, 0) 50%,
+    rgba(243, 243, 243, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00f3f3f3', endColorstr='#f3f3f3',GradientType=0 ); /* IE6-9 */
 `;
 
-const PrimarySection = ({ title, subtitle, children }) => (
+const PrimarySection = ({ animation, title, subtitle, children }) => (
   <PrimarySectionContainer>
-    <DotsWrapper id="dotswrapper">
-      <DotsAnimation id="dots" width="800" height="800" />
-    </DotsWrapper>
+    <ParticlesContainer id="particles-js" />
+    <ParticlesFader />
     <Container>
       {title && <Heading1>{title}</Heading1>}
       {subtitle && <TeaserText>{subtitle}</TeaserText>}
@@ -46,6 +65,7 @@ const PrimarySection = ({ title, subtitle, children }) => (
 );
 
 PrimarySection.propTypes = {
+  animation: bool,
   title: string,
   subtitle: string,
   children: node,
