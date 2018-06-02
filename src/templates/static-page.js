@@ -22,9 +22,9 @@ const StaticPageTemplate = ({ data }) => {
       <PrimarySection
         title={title}
         subtitle={subtitle}
-        animation={path === '/'}
-        teaser={teaser}
-      />
+        animation={path === '/'}>
+        <div dangerouslySetInnerHTML={{ __html: teaser }} />
+      </PrimarySection>
       <Container>
         <PageContainer dangerouslySetInnerHTML={{ __html: page.html }} />
       </Container>
