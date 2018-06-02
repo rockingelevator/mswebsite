@@ -45,6 +45,16 @@ p {
   margin-bottom: 30px;
 }
 
+p a {
+  font-weight: 600;
+  border-bottom: 1px dashed #333;
+}
+
+p a:hover {
+  font-weight: 600;
+  border-bottom: none;
+}
+
 .columns {
   column-count: 2;
   column-gap: 60px;
