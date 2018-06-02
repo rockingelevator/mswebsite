@@ -45,11 +45,11 @@ export const TextColumns = styled.div`
   column-count: 2;
   column-gap: 60px;
   max-width: 700px;
-  padding: 60px 0;
+  padding: 60px 0 20px 0;
   text-align: justify;
 
   @media (max-width: 1024px) {
-    padding: 40px 0;
+    padding: 40px 0 0 0;
   }
 
   @media (max-width: 800px) {

@@ -55,6 +55,15 @@ p a:hover {
   border-bottom: none;
 }
 
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px dashed #979797;
+  margin: 60px 0 30px 0;
+  background: none;
+}
+
 .columns {
   column-count: 2;
   column-gap: 60px;

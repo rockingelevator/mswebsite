@@ -8,7 +8,7 @@ import { TeaserText, TextColumns } from '../../styledComponents/typography';
 
 const PrimarySectionContainer = styled.div`
   background-color: ${palette.primaryBackground};
-  padding-bottom: 10px;
+  padding-bottom: 40px;
   height: auto;
   // overflow: hidden;
   position: relative;
@@ -55,8 +55,10 @@ const TeaserContainer = styled.div`
 
 const PrimarySection = ({ animation, title, subtitle, children }) => {
   const { dangerouslySetInnerHTML } = children.props;
+  const isTeaser =
+    dangerouslySetInnerHTML && dangerouslySetInnerHTML.__html != '';
   const isShortTeaser = dangerouslySetInnerHTML
-    ? dangerouslySetInnerHTML.__html.length < 500
+    ? dangerouslySetInnerHTML.__html.length < 400
     : false;
   return (
     <PrimarySectionContainer>
@@ -65,8 +67,9 @@ const PrimarySection = ({ animation, title, subtitle, children }) => {
       <Container>
         {title && <h1>{title}</h1>}
         {subtitle && <TeaserText>{subtitle}</TeaserText>}
-        {isShortTeaser && <TeaserContainer>{children}</TeaserContainer>}
-        {!isShortTeaser && <TextColumns>{children}</TextColumns>}
+        {isShortTeaser &&
+          isTeaser && <TeaserContainer>{children}</TeaserContainer>}
+        {!isShortTeaser && isTeaser && <TextColumns>{children}</TextColumns>}
       </Container>
     </PrimarySectionContainer>
   );
