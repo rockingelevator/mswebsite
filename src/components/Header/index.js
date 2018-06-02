@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
-import { string } from 'prop-types';
+import { string, bool } from 'prop-types';
+import withSizes from 'react-sizes';
 
 import palette from '../../styledComponents/palette';
 import { Container } from '../../styledComponents/layout';
@@ -43,14 +44,17 @@ const MENU_LINKS = [
 
 const BACKGROUND = `background-color: ${palette.primaryBackground}`;
 
-const Header = ({ background }) => (
+const Header = ({ background, isMobile }) => (
   <HeaderContainer background={background}>
     <Container>
       <Link to="/">
         <Logo />
       </Link>
       <MenuContainer>
-        <Menu items={[].concat(MENU_LINKS).reverse()} directionFromRight />
+        <Menu
+          items={isMobile ? MENU_LINKS : [].concat(MENU_LINKS).reverse()}
+          directionFromRight={!isMobile}
+        />
       </MenuContainer>
     </Container>
   </HeaderContainer>
@@ -62,6 +66,11 @@ Header.defaultProps = {
 
 Header.propTypes = {
   background: string,
+  isMobile: bool,
 };
 
-export default Header;
+const mapSizesToProps = ({ width }) => ({
+  isMobile: width < 640,
+});
+
+export default withSizes(mapSizesToProps)(Header);

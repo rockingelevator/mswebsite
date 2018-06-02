@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Link from 'gatsby-link';
 import withSizes from 'react-sizes';
@@ -114,53 +114,31 @@ const FOOTER_MENU_LINKS = [
   },
 ];
 
-// const Footer = () => (
-//   <FooterContainer>
-//     <Container>
-//       <ContactContainer>
-//         <a href="mailto:hello@mediasapiens.de">
-//           <Contact>hello@mediasapiens.de</Contact>
-//         </a>
-//         <Contact>+49 40 22817196-1</Contact>
-//       </ContactContainer>
-//       <Link to="/">
-//         <Logo />
-//       </Link>
-//       <MenuContainer>
-//         <Menu items={FOOTER_MENU_LINKS} columns={window.innerWidth <= 1024} />
-//       </MenuContainer>
-//     </Container>
-//   </FooterContainer>
-// );
+const Footer = ({ showColumns }) => (
+  <FooterContainer>
+    <Container>
+      <ContactContainer>
+        <a href="mailto:hello@mediasapiens.de">
+          <Contact>hello@mediasapiens.de</Contact>
+        </a>
+        <Contact>+49 40 22817196-1</Contact>
+      </ContactContainer>
+      <Link to="/">
+        <Logo />
+      </Link>
+      <MenuContainer>
+        <Menu items={FOOTER_MENU_LINKS} columns={showColumns} />
+      </MenuContainer>
+    </Container>
+  </FooterContainer>
+);
 
-// export default Footer;
+Footer.propTypes = {
+  showColumns: bool,
+};
 
-@withSizes(({ width }) => ({ showColumns: width <= 1024 }))
-class Footer extends Component {
-  static propTypes = {
-    showColumns: bool,
-  };
-  render() {
-    const { showColumns } = this.props;
-    return (
-      <FooterContainer>
-        <Container>
-          <ContactContainer>
-            <a href="mailto:hello@mediasapiens.de">
-              <Contact>hello@mediasapiens.de</Contact>
-            </a>
-            <Contact>+49 40 22817196-1</Contact>
-          </ContactContainer>
-          <Link to="/">
-            <Logo />
-          </Link>
-          <MenuContainer>
-            <Menu items={FOOTER_MENU_LINKS} columns={showColumns} />
-          </MenuContainer>
-        </Container>
-      </FooterContainer>
-    );
-  }
-}
+const mapSizesToProps = ({ width }) => ({
+  showColumns: width <= 1024,
+});
 
-export default Footer;
+export default withSizes(mapSizesToProps)(Footer);
