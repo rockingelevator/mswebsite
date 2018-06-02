@@ -54,7 +54,7 @@ const ParticlesFader = styled.div`
 
 const PrimarySection = ({ animation, title, subtitle, children }) => (
   <PrimarySectionContainer>
-    <ParticlesContainer id="particles-js" />
+    {animation && <ParticlesContainer id="particles-js" />}
     <ParticlesFader />
     <Container>
       {title && <Heading1>{title}</Heading1>}
