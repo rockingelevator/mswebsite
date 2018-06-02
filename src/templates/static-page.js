@@ -23,6 +23,7 @@ const filterEmpty = arr => {
 };
 
 const replaceBreaksWithParagraphs = input => {
+  if (!input) return '';
   const content = filterEmpty(input.split('\n')).join('</p><p>');
   return `<p>${content}</p>`;
 };

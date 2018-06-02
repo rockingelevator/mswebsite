@@ -13,7 +13,7 @@ const MenuContainer = styled.ul`
 const MenuLink = styled(Link)`
   display: ${props => (props.columns ? 'block' : 'inline-block')}
   float: ${props =>
-    !props.columns ? (props.directionFromRight ? 'right' : 'left') : 'none'};
+    props.columns ? 'none' : props.directionFromRight ? 'right' : 'left'};
   font-size: 12px;
   line-height: 40px;
   text-transform: uppercase;

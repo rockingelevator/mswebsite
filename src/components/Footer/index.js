@@ -40,11 +40,11 @@ const ContactContainer = styled.div`
   }
 
   @media (max-width: 800px) {
-    padding: 100px 0;
+    padding: 150px 0;
   }
 
   @media (max-width: 480px) {
-    padding: 0 0 60px 0;
+    padding: 120px 0;
   }
 `;
 

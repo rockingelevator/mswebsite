@@ -18,10 +18,11 @@ const HeaderContainer = styled.header`
 
 const MenuContainer = styled.ul`
   float: right;
+  margin-top: -10px;
 
   @media (max-width: 640px) {
     float: none;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 `;
 
