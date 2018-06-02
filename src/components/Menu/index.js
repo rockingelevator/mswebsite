@@ -11,8 +11,11 @@ const MenuContainer = styled.ul`
 `;
 
 const MenuLink = styled(Link)`
-  float: ${props => (props.directionFromRight ? 'right' : 'left')};
+  display: ${props => (props.columns ? 'block' : 'inline-block')}
+  float: ${props =>
+    !props.columns ? (props.directionFromRight ? 'right' : 'left') : 'none'};
   font-size: 12px;
+  line-height: 40px;
   text-transform: uppercase;
   font-weight: 700;
   color: ${palette.text};
@@ -30,7 +33,7 @@ const MenuLink = styled(Link)`
   }
 `;
 
-const Menu = ({ items, directionFromRight }) => (
+const Menu = ({ items, directionFromRight, columns }) => (
   <MenuContainer>
     {items &&
       items.length > 0 &&
@@ -39,7 +42,8 @@ const Menu = ({ items, directionFromRight }) => (
           <MenuLink
             to={item.link}
             key={`menulink_${i}`}
-            directionFromRight={directionFromRight}>
+            directionFromRight={directionFromRight}
+            columns={columns}>
             {item.name}
           </MenuLink>
         );

@@ -14,10 +14,38 @@ const FooterContainer = styled.div`
 const MenuContainer = styled.div`
   margin-top: 30px;
   margin-bottom: 10px;
+
+  @media (max-width: 1024px) {
+    & > ul {
+      columns: 3;
+    }
+  }
+  @media (max-width: 640px) {
+    & > ul {
+      columns: 2;
+    }
+  }
+  @media (max-width: 420px) {
+    & > ul {
+      columns: 1;
+    }
+  }
 `;
 
 const ContactContainer = styled.div`
-  padding: 200px 30px;
+  padding: 200px 0;
+
+  @media (max-width: 1280px) {
+    padding: 150px 0;
+  }
+
+  @media (max-width: 800px) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: 480px) {
+    padding: 0 0 60px 0;
+  }
 `;
 
 const Contact = styled.p`
@@ -25,6 +53,28 @@ const Contact = styled.p`
   font-weight: 700;
   line-height: 90px;
   color: ${palette.text};
+  margin: 0 0 20px 0;
+
+  @media (max-width: 1280px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0 0 10px 0;
+  }
+
+  @media (max-width: 640px) {
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 `;
 
 const FOOTER_MENU_LINKS = [
@@ -75,7 +125,7 @@ const Footer = () => (
         <Logo />
       </Link>
       <MenuContainer>
-        <Menu items={FOOTER_MENU_LINKS} />
+        <Menu items={FOOTER_MENU_LINKS} columns={window.innerWidth <= 1024} />
       </MenuContainer>
     </Container>
   </FooterContainer>
