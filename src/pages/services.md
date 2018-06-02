@@ -1,13 +1,17 @@
 ---
-path: "/services"
-title: "Services"
-subtitle: ""
-teaser: "Mediasapiens entwickelt Lösungen zur sicheren Digitalisierung von Geschäftsprozessen für mittelständische Unternehmen und Konzerne in Logistik, Handel, Produktion, Dienstleistung und E-Commerce. Realisieren Sie Wettbewerbsvorteile und entwickeln Ihre Software in die Zukunft: Kostengünstig, zeitoptimiert und agil."
+path: /services
+title: Services
+subtitle: ''
+teaser: >-
+  Mediasapiens entwickelt Lösungen zur sicheren Digitalisierung von
+  Geschäftsprozessen für mittelständische Unternehmen und Konzerne in Logistik,
+  Handel, Produktion, Dienstleistung und E-Commerce. Realisieren Sie
+  Wettbewerbsvorteile und entwickeln Ihre Software in die Zukunft:
+  Kostengünstig, zeitoptimiert und agil.
 ---
-
 ## WEB-ENTWICKLUNG
 
-Unser Team konzipiert und entwickelt für Sie Lösungen für E-Commerce-Plattformen, Hochlast-Webapplikationen und rechenintensivere Anwendungen. Wir setzen vor allem Python und das Django-Framework ein um vom Prototypen bis zum Roll-Out flexibel agieren zu können. Auf Basis von Microservices entsteht schlanke und robuste Individualsoftware, die sich flexibel und skalierbar in Ihre Systemlandschaft einfügt.
+Unser Team konzipiert und entwickelt für Sie Lösungen für [E-Commerce](/services/e-commerce) -Plattformen, Hochlast-Webapplikationen und rechenintensivere Anwendungen. Wir setzen vor allem [Python und das Django-Framework](https://mediasapiens.de/services/django-python) ein um vom Prototypen bis zum Roll-Out flexibel agieren zu können. Auf Basis von Microservices entsteht schlanke und robuste Individualsoftware, die sich flexibel und skalierbar in Ihre Systemlandschaft einfügt.
 
 Für innovative Projekte in E-Commerce sowie Blockchain und Smart Contracts entwickeln wir rechenintensive und Hochlast-Anwendungen, um sehr große Datenmengen sehr schnell und zuverlässig zu verarbeiten und die nötigen Kapazitäten für Echtzeit-Streaming und -Datenverkehr zu liefern. Das universell anpassbare E-Commerce-Framework von MEDIASAPIENS bietet alle Tools zur Projektierung, Verwaltung und Steuerung von Webshops. Individuelles Design, effiziente Suche und flüssiger Checkout-Prozess gewährleisten eine nachhaltige Steigerung der Usability und Konversions-Raten.
 
