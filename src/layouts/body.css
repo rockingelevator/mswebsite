@@ -88,6 +88,8 @@ hr {
   padding: 2px 8px;
   border-radius: 3px;
   background-color: #ededed;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .columns p:last-of-type > a:hover,

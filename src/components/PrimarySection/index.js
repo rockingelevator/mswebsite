@@ -51,6 +51,15 @@ const ParticlesFader = styled.div`
 const TeaserContainer = styled.div`
   max-width: 700px;
   padding: 60px 0 30px 0;
+  text-align: justify;
+
+  & p {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 640px) {
+    padding: 20px 0;
+  }
 `;
 
 const PrimarySection = ({ animation, title, subtitle, children }) => {
